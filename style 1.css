@@ -36,20 +36,31 @@
     text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        background-color: red;
+@media screen and (max-width: 800px) 
+{
+    .container {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 2fr 1fr 70px;
+        grid-template-areas: "header main"
+        "header widget"
+        "header footer";
+        height: 100vh;
+        gap: 2px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        background-color: green;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    body {
-        background-color: blue;
+@media screen and (max-width: 600px) 
+{
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header"
+        "widget"
+        "main"
+        "footer";
+        height: 100vh;
+        gap: 2px;
     }
 }
